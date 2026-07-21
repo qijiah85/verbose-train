@@ -9,7 +9,7 @@
 ```text
 .
 ├── specifications/   # 各类规范文档（编码、API、架构、流程等）
-├── agent-skills/     # Agent 技能定义与技能模板
+├── agent-skills/     # Agent 技能定义、外部目录与模板
 ├── docs/             # 项目说明、命名规范、文档风格指南
 └── examples/         # 示例规范与示例技能（可直接复制改造）
 ```
@@ -17,9 +17,11 @@
 | 目录 | 用途 |
 |------|------|
 | [`specifications/`](./specifications/) | 存放长期生效的规范与标准 |
-| [`agent-skills/`](./agent-skills/) | 存放可被 Agent 加载的技能（`SKILL.md`） |
+| [`agent-skills/`](./agent-skills/) | 存放可被 Agent 加载的技能（`SKILL.md`）与外部方法论索引 |
 | [`docs/`](./docs/) | 本仓库自身的使用说明与写作规范 |
 | [`examples/`](./examples/) | 完整示例，降低首次贡献门槛 |
+
+推荐工作流框架：[Superpowers 指南](./docs/superpowers.md) · [技能目录](./agent-skills/catalogs/superpowers/)
 
 ## 快速开始
 

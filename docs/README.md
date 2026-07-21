@@ -7,5 +7,6 @@
 | [getting-started.md](./getting-started.md) | 快速上手 |
 | [naming-conventions.md](./naming-conventions.md) | 目录与文件命名规范 |
 | [documentation-style-guide.md](./documentation-style-guide.md) | 文档格式与写作风格 |
+| [superpowers.md](./superpowers.md) | Superpowers 安装、工作流与本库关系 |
 
 业务规范请放入 [`../specifications/`](../specifications/)，技能请放入 [`../agent-skills/`](../agent-skills/)。
