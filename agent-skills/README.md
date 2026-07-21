@@ -11,6 +11,8 @@ agent-skills/
 │   └── <skill-name>/
 │       ├── SKILL.md  # 必需入口
 │       └── ...       # 可选辅助文件
+├── catalogs/         # 外部方法论索引（不 vendoring 全文）
+│   └── <framework>/
 └── templates/        # 新建技能时使用的模板
     └── SKILL.md
 ```

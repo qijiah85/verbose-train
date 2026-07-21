@@ -33,8 +33,16 @@ cp agent-skills/templates/SKILL.md \
 
 参考完整示例：[`examples/agent-skills/hello-world/SKILL.md`](../examples/agent-skills/hello-world/SKILL.md)
 
+## 使用 Superpowers（外部方法论）
+
+工程流程类技能推荐通过插件安装，不要整包拷贝进本仓库。说明与技能索引：
+
+- 指南：[`superpowers.md`](./superpowers.md)
+- 目录：[`../agent-skills/catalogs/superpowers/`](../agent-skills/catalogs/superpowers/)
+
 ## 推荐阅读顺序
 
 1. [naming-conventions.md](./naming-conventions.md)
 2. [documentation-style-guide.md](./documentation-style-guide.md)
-3. [../CONTRIBUTING.md](../CONTRIBUTING.md)
+3. [superpowers.md](./superpowers.md)（若使用编码 Agent 工作流）
+4. [../CONTRIBUTING.md](../CONTRIBUTING.md)
