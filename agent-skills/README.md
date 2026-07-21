@@ -40,6 +40,6 @@ cp agent-skills/templates/SKILL.md \
 
 | 技能 | 说明 | 状态 |
 |------|------|------|
-| _暂无正式技能_ | 从模板或示例复制后在此登记 | — |
+| [karpathy-guidelines](./skills/karpathy-guidelines/) | 减少 LLM 常见编码失误的行为准则（先思考、简洁、精准修改、目标驱动） | active |
 
 演示用途的示例技能见 [`../examples/agent-skills/`](../examples/agent-skills/)。
