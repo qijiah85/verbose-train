@@ -32,6 +32,6 @@ specifications/<category>/<topic>.md
 
 | 文档 | 分类 | 状态 | 说明 |
 |------|------|------|------|
-| _暂无_ | — | — | 新增规范后在此登记 |
+| [git-commit-message-style-guide.md](./coding/git-commit-message-style-guide.md) | coding | active | Git 提交信息格式规范 |
 
 示例文档见 [`../examples/specifications/`](../examples/specifications/)。

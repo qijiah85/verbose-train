@@ -12,4 +12,4 @@
 
 | 文档 | 状态 | 说明 |
 |------|------|------|
-| _暂无_ | — | 新增后在此登记 |
+| [git-commit-message-style-guide.md](./git-commit-message-style-guide.md) | active | Git 提交信息格式规范 |
