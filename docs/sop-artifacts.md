@@ -1,10 +1,10 @@
 # SOP 工件契约
 
 吸收 MetaGPT「标准化操作流程」思想：每个阶段消费上游工件、产出下游可引用的工件。  
-工件默认写在目标业务仓库的 `docs/sdlc/`（可按项目调整路径，但 **ID 保持稳定**）。
+工件默认写在**目标业务仓库**的 `docs/sdlc/`（可按项目调整路径，但 **ID 保持稳定**）。不要与本知识库自己的 `docs/`（安装说明、概览等）混淆。
 
 权威阶段地图：[`../agent-skills/catalogs/sdlc/`](../agent-skills/catalogs/sdlc/)。  
-模板：[`../agent-skills/templates/artifacts/`](../agent-skills/templates/artifacts/)。
+模板目录：[`../agent-skills/templates/artifacts/`](../agent-skills/templates/artifacts/)（含 `A-PRD`…`A-INCIDENT` 全套起步模板）。
 
 ## 工件一览
 

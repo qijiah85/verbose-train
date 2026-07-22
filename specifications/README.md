@@ -1,6 +1,10 @@
 # 规范文档（Specifications）
 
-存放各类长期生效的规范与标准。按主题分类，一篇文档只覆盖一个主题。
+存放各类**长期生效**的规范与标准（给人读；Agent 技能可引用）。按主题分类，一篇文档只覆盖一个主题。
+
+> **与定位的关系：** 本仓库是「可加载技能 + 规范知识库」。技能侧已覆盖 SDLC SOP；规范侧当前为**起步集**（种子文档 + 分类骨架），不是「已写全所有工程标准」。新增规范请按分类补全并更新下方索引。
+
+一次性项目交付物（PRD、发布单等）属于**业务仓库**的 SOP 工件（见 [`../docs/sop-artifacts.md`](../docs/sop-artifacts.md)），不要当作本目录的长期规范。
 
 ## 分类目录
 
@@ -33,5 +37,8 @@ specifications/<category>/<topic>.md
 | 文档 | 分类 | 状态 | 说明 |
 |------|------|------|------|
 | [git-commit-message-style-guide.md](./coding/git-commit-message-style-guide.md) | coding | active | Git 提交信息格式规范 |
+| [software-delivery-process.md](./process/software-delivery-process.md) | process | active | 交付过程原则（起步，对齐 SOP） |
+
+流程/发布的**可执行**步骤优先看 Agent 技能与 SOP；本目录沉淀团队选定后的长期条文。
 
 示例文档见 [`../examples/specifications/`](../examples/specifications/)。

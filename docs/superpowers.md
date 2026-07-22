@@ -45,19 +45,21 @@ Codex、Copilot CLI、OpenCode、Pi、Gemini 等安装方式见上游 [README](h
 
 ## 标准工作流
 
+默认按**单 Agent**使用（与本库「技能知识库」定位一致）：
+
 ```text
 1. brainstorming          澄清意图 → 多方案 → 分段确认设计（未批准不写代码）
 2. using-git-worktrees    隔离工作区 / 新分支
 3. writing-plans          拆成可验证的小任务
-4. subagent-driven-development 或 executing-plans
-                          按任务执行（可带子代理审查或人工检查点）
+4. executing-plans        按任务执行（默认）
 5. test-driven-development（贯穿实现）红 → 绿 → 重构
 6. requesting-code-review 对照计划审查
 7. finishing-a-development-branch  合并 / PR / 保留 / 丢弃
 ```
 
-旁路：`systematic-debugging`、`verification-before-completion`、`dispatching-parallel-agents`、`receiving-code-review`。  
-元技能：`using-superpowers`（会话启动强制「先用技能」）、`writing-skills`（编写新技能）。
+旁路：`systematic-debugging`、`verification-before-completion`、`receiving-code-review`。  
+可选高级编排（非默认）：`subagent-driven-development`、`dispatching-parallel-agents`。  
+元技能：`using-superpowers`、`writing-skills`。
 
 ## 与本仓库技能的关系
 

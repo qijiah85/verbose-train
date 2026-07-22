@@ -5,6 +5,7 @@
 | 文档 | 说明 |
 |------|------|
 | [getting-started.md](./getting-started.md) | 快速上手 |
+| [installing-skills.md](./installing-skills.md) | 把本库 skills 装进 Cursor / Claude |
 | [sdlc-overview.md](./sdlc-overview.md) | 全生命周期技能概览 |
 | [sop-artifacts.md](./sop-artifacts.md) | SOP 工件 ID、门禁、角色映射 |
 | [community-landscape.md](./community-landscape.md) | MetaGPT/ChatDev 等社区对照 |

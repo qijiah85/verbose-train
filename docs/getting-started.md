@@ -1,6 +1,10 @@
 # 快速开始
 
-本仓库是 **SDLC AI 技能集**：SOP 工件 + 阶段技能 + 编号 Playbook。规范给人读，技能给 Agent 用。
+本仓库是 **可加载技能 + 规范知识库**：SOP 工件 + 阶段技能 + 编号 Playbook。规范给人读，技能给 Agent 用。
+
+## 0. 先安装技能
+
+按 [`installing-skills.md`](./installing-skills.md) 把 `agent-skills/skills/` 链到 Cursor / Claude 可发现的目录。未安装时，对话里点名技能也不会加载本库正文。
 
 ## 三条路径
 
@@ -38,9 +42,10 @@ cp agent-skills/templates/SKILL.md \
 
 ## 推荐阅读顺序
 
-1. [sdlc-overview.md](./sdlc-overview.md)
-2. [sop-artifacts.md](./sop-artifacts.md)
-3. [community-landscape.md](./community-landscape.md)
-4. [naming-conventions.md](./naming-conventions.md)
-5. [documentation-style-guide.md](./documentation-style-guide.md)
-6. [../CONTRIBUTING.md](../CONTRIBUTING.md)
+1. [installing-skills.md](./installing-skills.md)
+2. [sdlc-overview.md](./sdlc-overview.md)
+3. [sop-artifacts.md](./sop-artifacts.md)
+4. [community-landscape.md](./community-landscape.md)
+5. [naming-conventions.md](./naming-conventions.md)
+6. [documentation-style-guide.md](./documentation-style-guide.md)
+7. [../CONTRIBUTING.md](../CONTRIBUTING.md)

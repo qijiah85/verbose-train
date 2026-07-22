@@ -4,17 +4,20 @@
 
 请优先通过各宿主的插件市场安装 Superpowers，以获得 SessionStart hook 与更新。详见 [`../../../docs/superpowers.md`](../../../docs/superpowers.md)。
 
-## 工作流顺序
+## 工作流顺序（默认：单 Agent）
+
+本库定位是教 **单个** IDE Agent 按 SOP 干活。下列为 Superpowers 中段推荐顺序；带「可选」的项不是默认主路径。
 
 1. `using-superpowers` — 会话启动：有技能必须先用  
 2. `brainstorming` — 创意/功能工作前：澄清与设计批准  
 3. `using-git-worktrees` — 隔离实现环境  
 4. `writing-plans` — 写出可执行计划  
-5. `subagent-driven-development` 或 `executing-plans` — 执行计划  
+5. `executing-plans` — 按计划执行（默认）  
 6. `test-driven-development` — 实现时强制红绿重构  
 7. `requesting-code-review` / `receiving-code-review` — 审查与反馈  
 8. `finishing-a-development-branch` — 收尾集成  
 
+**可选旁路（非本库默认叙事）：** `subagent-driven-development`、`dispatching-parallel-agents` — 仅在宿主支持且任务可拆时使用；不把本知识库变成多 Agent 运行时。
 ## 技能一览
 
 上游路径：`https://github.com/obra/superpowers/tree/main/skills/<name>`
@@ -34,14 +37,19 @@
 | [writing-plans](https://github.com/obra/superpowers/tree/main/skills/writing-plans) | 已有规格、动手写代码之前 |
 | [executing-plans](https://github.com/obra/superpowers/tree/main/skills/executing-plans) | 在独立会话中按计划分批执行并设检查点 |
 
-### 实现与编排
+### 实现（默认）
 
 | 技能 | 何时使用 |
 |------|----------|
 | [test-driven-development](https://github.com/obra/superpowers/tree/main/skills/test-driven-development) | 实现功能或修 bug，写实现代码之前 |
-| [subagent-driven-development](https://github.com/obra/superpowers/tree/main/skills/subagent-driven-development) | 当前会话内按任务派生子代理执行计划 |
-| [dispatching-parallel-agents](https://github.com/obra/superpowers/tree/main/skills/dispatching-parallel-agents) | 2+ 个无共享状态的独立任务可并行时 |
 | [using-git-worktrees](https://github.com/obra/superpowers/tree/main/skills/using-git-worktrees) | 需要隔离工作区或执行计划前 |
+
+### 可选编排旁路
+
+| 技能 | 何时使用 |
+|------|----------|
+| [subagent-driven-development](https://github.com/obra/superpowers/tree/main/skills/subagent-driven-development) | 宿主支持时，按任务派生子代理（非本库默认） |
+| [dispatching-parallel-agents](https://github.com/obra/superpowers/tree/main/skills/dispatching-parallel-agents) | 2+ 无共享状态任务可并行（非本库默认） |
 
 ### 质量与收尾
 

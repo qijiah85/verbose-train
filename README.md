@@ -1,31 +1,41 @@
 # agent-skills-and-specs
 
-**把软件工程全生命周期封装为可加载 AI Skills：SOP 工件链 + 阶段门禁 Playbook；规范给人读，技能给 Agent 用。**
+**定位：可加载 Agent Skills + 人读规范知识库 —— 教 Agent 按 SOP 干活。**
 
 GitHub 仓库名可能是自动生成的；实际用途以下文为准。
 
 ## 这个仓库是干什么的
 
-这是面向 Cursor / Claude 等宿主的 **SDLC AI 技能集**知识库，吸收 MetaGPT（SOP 工件）、ChatDev（阶段链门禁）、OpenHands（可执行验证）、DevOpsGPT/编号 Skill 包（部署与可发现性）的优点，但**不**做成多智能体公司运行时。
+面向 Cursor / Claude 等宿主的**技能与规范知识库**（不是多智能体运行时、不是沙箱产品）：
 
-内容包括：
+1. **Agent Skills（`agent-skills/skills/`）** — 可加载的 `SKILL.md`，按 SDLC 阶段约束 Agent 行为  
+2. **人读规范（`specifications/`）** — 长期标准；当前为起步集，随团队增长补全  
+3. **SOP 工件契约（`docs/sop-artifacts.md`）** — 一次项目交付的活文档 ID 与门禁  
+4. **Playbooks / Catalogs** — 编排指针与外部索引（**不可**代替 `SKILL.md` 加载）
 
-1. **Agent Skills** — 按阶段可加载的 `SKILL.md`（含编排 playbook）
-2. **SOP 工件契约** — PRD→架构/数据/API→验证→容器/CI→发布→复盘
-3. **规范文档** — 团队长期标准（`specifications/`）
-4. **Catalogs** — Superpowers 与社区项目索引（不整包拷贝）
+吸收 MetaGPT（工件 SOP）、ChatDev（阶段门禁）、OpenHands（可执行验证）等**方法**，但保持知识库边界。对照见 [`docs/community-landscape.md`](./docs/community-landscape.md)。
 
-**成功标准：** 1 分钟内搞清「与 MetaGPT/ChatDev 的差异、当前阶段、该产出哪份工件、该加载哪个技能」。
+**成功标准：** 1 分钟内搞清定位、如何安装技能、当前阶段该加载什么、该产出哪份工件。
+
+## 四类内容怎么放
+
+| 目录 | 给谁 | 放什么 | 不放什么 |
+|------|------|--------|----------|
+| `agent-skills/skills/` | Agent | 可加载 `SKILL.md` | 外部框架全文 |
+| `agent-skills/playbooks/` | 人 / 编排技能 | 编号步骤指针 | 第二份技能正文 |
+| `agent-skills/catalogs/` | 人 | 阶段地图、外部索引 | 可执行运行时 |
+| `specifications/` | 人（Agent 可引用） | 长期规范 | 一次性项目 PRD（那是业务仓 `docs/sdlc/` 工件） |
 
 ## 快速入口
 
 | 我想… | 去这里 |
 |------|--------|
-| 跑通需求→部署全流程 | [`running-sdlc-playbook`](./agent-skills/skills/running-sdlc-playbook/) · [编号剧本](./agent-skills/playbooks/full-sdlc/) |
-| 只做某一阶段 | [`using-sdlc-skills`](./agent-skills/skills/using-sdlc-skills/) · [阶段地图](./agent-skills/catalogs/sdlc/) |
-| 看工件 ID 与门禁 | [`docs/sop-artifacts.md`](./docs/sop-artifacts.md) |
-| 看社区项目对照 | [`docs/community-landscape.md`](./docs/community-landscape.md) |
-| 中段 TDD/审查 | [`docs/superpowers.md`](./docs/superpowers.md) |
+| **安装本库技能** | [`docs/installing-skills.md`](./docs/installing-skills.md) |
+| 跑通需求→部署 SOP | [`running-sdlc-playbook`](./agent-skills/skills/running-sdlc-playbook/) · [剧本](./agent-skills/playbooks/full-sdlc/) |
+| 只做某一阶段 | [`using-sdlc-skills`](./agent-skills/skills/using-sdlc-skills/) · [地图](./agent-skills/catalogs/sdlc/) |
+| 工件 ID 与门禁 | [`docs/sop-artifacts.md`](./docs/sop-artifacts.md) |
+| 中段 TDD/审查 | [`docs/superpowers.md`](./docs/superpowers.md)（插件） |
+| 社区边界 | [`docs/community-landscape.md`](./docs/community-landscape.md) |
 
 ## 生命周期速览
 
@@ -34,7 +44,7 @@ GitHub 仓库名可能是自动生成的；实际用途以下文为准。
 | 编排 | `using-sdlc-skills` / `running-sdlc-playbook` | 阶段声明 |
 | 需求 | `gathering-requirements` | `A-PRD` |
 | 设计 | `designing-architecture` / `modeling-data` / `designing-apis` | `A-ARCH` / `A-DATA` / `A-API` |
-| 计划→质量 | Superpowers | `A-PLAN` / `A-VERIFY` |
+| 计划→质量 | Superpowers（外部插件） | `A-PLAN` / `A-VERIFY` |
 | 部署准备 | `containerizing-applications` / `writing-cicd-pipelines` | `A-CONTAINER` / `A-CICD` |
 | 发布 | `preparing-releases` | `A-RELEASE` |
 | 运维 | `handling-incidents` | `A-INCIDENT` |
@@ -44,30 +54,31 @@ GitHub 仓库名可能是自动生成的；实际用途以下文为准。
 
 | 不是 | 说明 |
 |------|------|
-| ❌ MetaGPT/ChatDev 式多 Agent 运行时 | 不调度虚拟员工；见社区对照文档 |
-| ❌ OpenHands 式沙箱产品 | 不提供 Docker socket 宿主 |
-| ❌ 可运行业务应用 / SDK | 只有文档与技能 |
+| ❌ 多智能体「虚拟公司」运行时 | 不调度 MetaGPT/ChatDev 式多角色进程 |
+| ❌ Agent 沙箱 / 云原生控制面 | 不提供 Docker socket、不替你 `kubectl apply` 生产集群 |
+| ❌ 可运行业务应用 / SDK | 只有 Markdown 技能与规范 |
 | ❌ Superpowers 全文镜像 | 请插件安装 |
+| ❌ 「规范已经写全」的承诺 | `specifications/` 为起步集，欢迎按目录补全 |
 
 ## 仓库结构
 
 ```text
 .
-├── specifications/     # 人读规范
+├── specifications/     # 人读规范（起步集）
 ├── agent-skills/
-│   ├── skills/         # 可加载技能
-│   ├── playbooks/      # 编号全流程剧本
+│   ├── skills/         # 可加载技能 ← 安装这个
+│   ├── playbooks/      # 编号剧本（指针）
 │   ├── catalogs/       # sdlc / superpowers / community
 │   └── templates/      # 技能与 SOP 工件模板
-├── docs/               # 概览、SOP、社区对照、Superpowers
+├── docs/               # 安装、概览、SOP、社区对照
 └── examples/
 ```
 
 ## 我该怎么用
 
-1. [`docs/getting-started.md`](./docs/getting-started.md)
-2. [`docs/sdlc-overview.md`](./docs/sdlc-overview.md)
-3. 命名/风格：[`docs/naming-conventions.md`](./docs/naming-conventions.md)、[`docs/documentation-style-guide.md`](./docs/documentation-style-guide.md)
+1. [`docs/installing-skills.md`](./docs/installing-skills.md) — **先安装**  
+2. [`docs/getting-started.md`](./docs/getting-started.md)  
+3. [`docs/sdlc-overview.md`](./docs/sdlc-overview.md)
 
 ### 新增自有技能
 
@@ -77,7 +88,7 @@ cp agent-skills/templates/SKILL.md \
    agent-skills/skills/my-skill-name/SKILL.md
 ```
 
-登记到 [`agent-skills/catalogs/sdlc/`](./agent-skills/catalogs/sdlc/)；若进入主路径则更新 playbook。
+登记 [`agent-skills/catalogs/sdlc/`](./agent-skills/catalogs/sdlc/)；主路径变更则更新 playbook。
 
 ## 贡献
 
