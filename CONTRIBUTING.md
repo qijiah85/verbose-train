@@ -27,6 +27,8 @@
 4. 自检命名、风格与链接是否有效
 5. 提交 Pull Request，说明变更目的与适用范围
 
+不要直接向 `main` 推送。默认分支保护说明见 [`docs/branch-protection.md`](./docs/branch-protection.md)。
+
 ## 内容要求
 
 - **单一职责**：一篇规范或一个技能只解决一类问题
