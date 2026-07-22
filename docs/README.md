@@ -9,6 +9,7 @@
 | [sdlc-overview.md](./sdlc-overview.md) | 全生命周期技能概览 |
 | [sop-artifacts.md](./sop-artifacts.md) | SOP 工件 ID、门禁、角色映射 |
 | [community-landscape.md](./community-landscape.md) | MetaGPT/ChatDev 等社区对照 |
+| [positioning-review-2026-07-22.md](./positioning-review-2026-07-22.md) | 定位审查纪要与修复对照 |
 | [naming-conventions.md](./naming-conventions.md) | 命名规范 |
 | [documentation-style-guide.md](./documentation-style-guide.md) | 文档风格 |
 | [superpowers.md](./superpowers.md) | Superpowers 安装与关系 |
