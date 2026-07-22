@@ -5,6 +5,7 @@
 | 文档 | 说明 |
 |------|------|
 | [getting-started.md](./getting-started.md) | 快速上手 |
+| [sdlc-overview.md](./sdlc-overview.md) | 软件工程全生命周期技能概览 |
 | [naming-conventions.md](./naming-conventions.md) | 目录与文件命名规范 |
 | [documentation-style-guide.md](./documentation-style-guide.md) | 文档格式与写作风格 |
 | [superpowers.md](./superpowers.md) | Superpowers 安装、工作流与本库关系 |

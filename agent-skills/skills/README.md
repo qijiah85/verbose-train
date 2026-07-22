@@ -1,18 +1,23 @@
-# 正式技能目录
+# 自有 Agent 技能
 
-将可复用、可分发的 Agent 技能放在本目录。每个子目录对应一个技能。
+本目录存放可被 Agent 加载的自有技能（每目录一个 `SKILL.md`）。
 
-```text
-skills/
-└── <skill-name>/
-    ├── SKILL.md
-    └── <optional-supporting-files>
-```
+按生命周期查看完整地图（含 Superpowers 与 planned）：[`../catalogs/sdlc/`](../catalogs/sdlc/)。
 
-新建时复制 [`../templates/SKILL.md`](../templates/SKILL.md)，并更新上级 [`../README.md`](../README.md) 索引。
+## 索引
 
-## 已收录
+| 技能 | 阶段 | 说明 | 状态 |
+|------|------|------|------|
+| [using-sdlc-skills](./using-sdlc-skills/) | 元 | 任务开始时按阶段路由 | active |
+| [gathering-requirements](./gathering-requirements/) | 需求 | 范围、故事、验收标准 | active |
+| [designing-architecture](./designing-architecture/) | 设计 | 系统结构与技术取舍 | active |
+| [designing-apis](./designing-apis/) | 设计 | API 契约与错误模型 | active |
+| [preparing-releases](./preparing-releases/) | 发布 | 发版就绪与回滚 | active |
+| [handling-incidents](./handling-incidents/) | 运维 | 线上故障响应与复盘 | active |
+| [karpathy-guidelines](./karpathy-guidelines/) | 偏好 | 编码姿态：简洁、精准、可验证 | active |
 
-| 技能 | 说明 |
-|------|------|
-| [karpathy-guidelines](./karpathy-guidelines/) | Karpathy 启发的 LLM 编码行为准则；含 [`examples.md`](./karpathy-guidelines/examples.md) |
+## 说明
+
+- **流程技能**：上表除「偏好」外，均为阶段流程。
+- **偏好技能**：可选叠加，不替代需求/设计/发布等流程。
+- **外部技能**：不放在本目录；见 [`../catalogs/superpowers/`](../catalogs/superpowers/)。
