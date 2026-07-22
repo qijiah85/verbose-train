@@ -63,15 +63,18 @@ Codex、Copilot CLI、OpenCode、Pi、Gemini 等安装方式见上游 [README](h
 
 | 内容 | 位置 | 角色 |
 |------|------|------|
-| SDLC 阶段地图 | [catalogs/sdlc](../agent-skills/catalogs/sdlc/) | 全生命周期路由：需求→运维 |
-| Superpowers | 插件安装 + [catalog](../agent-skills/catalogs/superpowers/) | 中段规定性流程（计划/实现/调试/审查） |
-| 自有阶段技能 | `agent-skills/skills/`（如 `gathering-requirements`） | 补齐需求、设计、发布、运维 |
-| 偏好技能（如 `karpathy-guidelines`） | `agent-skills/skills/` | 可选编码姿态，横切实现 |
-| 规范文档 | `specifications/` | 长期标准，非运行时技能 |
+| SDLC 阶段地图 + 角色 | [catalogs/sdlc](../agent-skills/catalogs/sdlc/) | 全生命周期路由与 SOP |
+| 编号 Playbook | [playbooks/full-sdlc](../agent-skills/playbooks/full-sdlc/) | ChatChain 式门禁编排 |
+| SOP 工件 | [sop-artifacts.md](./sop-artifacts.md) | 阶段交付物契约 |
+| Superpowers | 插件安装 + [catalog](../agent-skills/catalogs/superpowers/) | 中段计划/实现/调试/审查 |
+| 自有阶段技能 | `agent-skills/skills/` | 需求、设计、容器、CI、发布、运维 |
+| 社区对照 | [community-landscape.md](./community-landscape.md) | 与 MetaGPT/ChatDev 等边界 |
+| 偏好技能 | 如 `karpathy-guidelines` | 可选编码姿态 |
+| 规范文档 | `specifications/` | 长期标准 |
 
-**配合建议：** 用 [`sdlc-overview.md`](./sdlc-overview.md) 选阶段；Superpowers 管中段「怎么做项目」；自有技能补两端；Karpathy 等偏好管「编码姿态」。可同时启用。
+**配合建议：** Playbook/SOP 定全流程；Superpowers 管中段纪律；社区运行时（MetaGPT 等）按需另选，不在本库内模拟。
 
-不确定阶段时先加载 [`using-sdlc-skills`](../agent-skills/skills/using-sdlc-skills/)。
+不确定阶段时先加载 [`using-sdlc-skills`](../agent-skills/skills/using-sdlc-skills/)；要端到端用 [`running-sdlc-playbook`](../agent-skills/skills/running-sdlc-playbook/)。
 
 ## 哲学摘要
 

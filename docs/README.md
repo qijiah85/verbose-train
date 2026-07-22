@@ -5,9 +5,11 @@
 | 文档 | 说明 |
 |------|------|
 | [getting-started.md](./getting-started.md) | 快速上手 |
-| [sdlc-overview.md](./sdlc-overview.md) | 软件工程全生命周期技能概览 |
-| [naming-conventions.md](./naming-conventions.md) | 目录与文件命名规范 |
-| [documentation-style-guide.md](./documentation-style-guide.md) | 文档格式与写作风格 |
-| [superpowers.md](./superpowers.md) | Superpowers 安装、工作流与本库关系 |
+| [sdlc-overview.md](./sdlc-overview.md) | 全生命周期技能概览 |
+| [sop-artifacts.md](./sop-artifacts.md) | SOP 工件 ID、门禁、角色映射 |
+| [community-landscape.md](./community-landscape.md) | MetaGPT/ChatDev 等社区对照 |
+| [naming-conventions.md](./naming-conventions.md) | 命名规范 |
+| [documentation-style-guide.md](./documentation-style-guide.md) | 文档风格 |
+| [superpowers.md](./superpowers.md) | Superpowers 安装与关系 |
 
-业务规范请放入 [`../specifications/`](../specifications/)，技能请放入 [`../agent-skills/`](../agent-skills/)。
+业务规范 → [`../specifications/`](../specifications/)，技能 → [`../agent-skills/`](../agent-skills/)。

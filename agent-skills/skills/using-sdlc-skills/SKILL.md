@@ -28,22 +28,30 @@ description: >
 ## 流程
 
 1. **复述目标**：用一两句话确认用户要什么，以及成功长什么样。
-2. **判定阶段**（选一个主阶段；可标注次要阶段）：
+2. **选择模式：**
+   - **单阶段：** 下表路由到一个技能
+   - **全流程：** 转 `running-sdlc-playbook` + `playbooks/full-sdlc`
+   - **角色模式（可选）：** 按 `docs/sop-artifacts.md` 角色表加载技能（如「你当架构师」→ 设计技能）
+3. **判定阶段**（选一个主阶段；可标注次要阶段）：
 
 | 信号 | 主阶段 | 首选技能 |
 |------|--------|----------|
+| 要从需求一路做到部署 | 编排 | `running-sdlc-playbook` |
 | 范围不清、缺验收标准、在争论「要不要做」 | 需求 | `gathering-requirements` |
 | 模块边界、技术选型、数据流、系统图 | 设计 | `designing-architecture` |
+| 实体、表结构、迁移 | 设计 | `modeling-data` |
 | 接口路径、错误码、契约、兼容性 | 设计 | `designing-apis` |
 | 已有设计，要拆任务/写计划 | 计划 | Superpowers: `writing-plans`（创意未澄清则先 `brainstorming`） |
 | 写代码、改实现、加测试 | 实现 | Superpowers: `test-driven-development` + 计划执行类技能 |
 | Bug、测试红、异常行为 | 质量 | Superpowers: `systematic-debugging` |
+| Dockerfile / Compose / 镜像 | 部署准备 | `containerizing-applications` |
+| CI/CD 流水线 | 部署准备 | `writing-cicd-pipelines` |
 | 版本、changelog、回滚、上线检查 | 发布 | `preparing-releases` |
 | 线上故障、降级、复盘 | 运维 | `handling-incidents` |
 
-3. **声明路由**：明确写出「当前阶段 → 将加载的技能」；若依赖 Superpowers，提醒需已安装插件（见 `docs/superpowers.md`）。
-4. **加载并执行**该技能；未完成当前阶段验收前，不跳到更后的阶段。
-5. **编码时可选叠加**偏好技能 `karpathy-guidelines`（不替代流程技能）。
+4. **声明路由**：写出「模式 → 阶段 → 技能 → 期望工件 ID」；若依赖 Superpowers，提醒安装插件（`docs/superpowers.md`）。
+5. **加载并执行**；遵守 SOP 门禁（`docs/sop-artifacts.md`），未完成当前阶段验收前不跳到更后阶段。
+6. **编码时可选叠加**偏好技能 `karpathy-guidelines`。
 
 ### 决策点
 
@@ -52,6 +60,7 @@ description: >
 | 同时缺需求与设计 | 先 `gathering-requirements`，再设计技能 |
 | 用户只要「快点改代码」但验收标准缺失 | 仍先补最小验收标准，再实现 |
 | 阶段属于 Superpowers 中段 | 使用外部技能，不在本库臆造平行流程 |
+| 用户点名 MetaGPT/ChatDev | 说明本库是技能 SOP；多 Agent 运行时见 `docs/community-landscape.md` |
 
 ## 红线
 

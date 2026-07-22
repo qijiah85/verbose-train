@@ -54,12 +54,22 @@ description: >
 - 禁止「先上了再说」跳过验证证据
 - 禁止 changelog 只写 `bug fixes` 而无用户可感知描述（有用户影响时）
 
+## SOP 输入 / 输出
+
+- **输入：** `A-VERIFY`；建议 `A-CONTAINER` / `A-CICD`
+- **输出：** `A-RELEASE`（模板 `agent-skills/templates/artifacts/a-release.md`）
+
+## 阶段门禁
+
+无验证证据不得发布；无回滚方案不得进生产（只读文档变更可声明例外）。
+
 ## 交付物检查
 
 - [ ] 版本号与依据
 - [ ] 变更说明 + 迁移/配置说明
 - [ ] 检查清单已勾验
 - [ ] 回滚步骤可执行
+- [ ] `A-RELEASE` 已落盘
 - [ ] 发布后观察项已定义
 
 ## 示例
