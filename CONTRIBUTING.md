@@ -7,9 +7,14 @@
 | 类型 | 放置位置 | 说明 |
 |------|----------|------|
 | 规范文档 | `specifications/<category>/` | 编码、API、架构、流程等长期标准 |
-| Agent 技能 | `agent-skills/skills/<skill-name>/` | 可被 Agent 加载的技能包 |
-| 项目文档 | `docs/` | 仓库说明、命名、风格等元文档 |
+| Agent 技能 | `agent-skills/skills/<skill-name>/` | 可被 Agent 加载的技能包（流程或偏好） |
+| SDLC 地图 | `agent-skills/catalogs/sdlc/` | 新阶段技能须登记到阶段对照表 |
+| 项目文档 | `docs/` | 仓库说明、SDLC 概览、命名、风格等 |
 | 示例 | `examples/` | 演示用途的完整样例 |
+
+新增**流程技能**时：标明所属 SDLC 阶段，并更新 [`agent-skills/catalogs/sdlc/`](./agent-skills/catalogs/sdlc/) 与技能 README 索引。  
+新增**偏好技能**时：在索引中归入「偏好」组，避免写成强制全员流程。  
+Superpowers 已覆盖的中段流程：不要在 `skills/` 再拷平行全文。
 
 ## 提交流程
 
