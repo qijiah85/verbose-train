@@ -101,6 +101,8 @@ cp specifications/templates/specification-template.md \
 
 命名与风格：[naming-conventions](./docs/naming-conventions.md) · [documentation-style-guide](./docs/documentation-style-guide.md) · [CONTRIBUTING](./CONTRIBUTING.md)
 
+默认分支 **`main`** 建议开启分支保护（禁止直推 / force-push）：见 [docs/branch-protection.md](./docs/branch-protection.md)。
+
 ## License
 
 [Apache License 2.0](./LICENSE)。引用的外部项目保留其原许可。
