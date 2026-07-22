@@ -13,5 +13,5 @@ Agent 可执行的阶段流程见 [`../../agent-skills/catalogs/sdlc/`](../../ag
 
 | 文档 | 状态 | 说明 |
 |------|------|------|
-| _暂无_ | — | 新增后在此登记 |
+| [software-delivery-process.md](./software-delivery-process.md) | active | 交付过程原则（起步，对齐 SOP 技能） |
 

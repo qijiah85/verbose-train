@@ -1,10 +1,11 @@
 # 技能目录（Catalogs）
 
-本目录存放**索引型**内容：外部方法论，以及本库的 SDLC 阶段地图。这里通常**不**放可加载技能全文。
+索引型内容：SDLC 地图、外部方法论、社区项目对照。通常**不**放可加载技能全文。
 
-| 目录 | 说明 | 推荐使用方式 |
-|------|------|----------------|
-| [sdlc/](./sdlc/) | 软件工程全生命周期阶段 → 技能对照表 | 选阶段、查自有与外部技能 |
-| [superpowers/](./superpowers/) | obra/superpowers 工程方法论技能索引 | 各宿主插件安装 + 本索引查阅 |
+| 目录 | 说明 |
+|------|------|
+| [sdlc/](./sdlc/) | 阶段 → 技能、角色、工件 |
+| [superpowers/](./superpowers/) | obra/superpowers 索引（推荐插件安装） |
+| [community/](./community/) | MetaGPT、ChatDev、OpenHands 等对照 |
 
-自有、可直接加载的技能请放在 [`../skills/`](../skills/)。
+自有技能：[`../skills/`](../skills/)。编号剧本：[`../playbooks/`](../playbooks/)。

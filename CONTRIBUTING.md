@@ -6,15 +6,18 @@
 
 | 类型 | 放置位置 | 说明 |
 |------|----------|------|
-| 规范文档 | `specifications/<category>/` | 编码、API、架构、流程等长期标准 |
-| Agent 技能 | `agent-skills/skills/<skill-name>/` | 可被 Agent 加载的技能包（流程或偏好） |
-| SDLC 地图 | `agent-skills/catalogs/sdlc/` | 新阶段技能须登记到阶段对照表 |
-| 项目文档 | `docs/` | 仓库说明、SDLC 概览、命名、风格等 |
-| 示例 | `examples/` | 演示用途的完整样例 |
+| 规范文档 | `specifications/<category>/` | 长期标准 |
+| Agent 技能 | `agent-skills/skills/<skill-name>/` | 流程 / 编排 / 偏好 |
+| Playbook | `agent-skills/playbooks/` | 编号链式剧本（指向 skills） |
+| SOP 工件模板 | `agent-skills/templates/artifacts/` | `A-*` 模板 |
+| SDLC 地图 | `agent-skills/catalogs/sdlc/` | 阶段/角色/工件登记 |
+| 社区对照 | `agent-skills/catalogs/community/`、`docs/community-landscape.md` | 外部项目索引 |
+| 项目文档 | `docs/` | 概览与约定 |
+| 示例 | `examples/` | 演示样例 |
 
-新增**流程技能**时：标明所属 SDLC 阶段，并更新 [`agent-skills/catalogs/sdlc/`](./agent-skills/catalogs/sdlc/) 与技能 README 索引。  
-新增**偏好技能**时：在索引中归入「偏好」组，避免写成强制全员流程。  
-Superpowers 已覆盖的中段流程：不要在 `skills/` 再拷平行全文。
+新增**流程技能**时：写明 SOP 输入/输出工件 ID，更新 sdlc catalog；进入主路径则更新 `playbooks/full-sdlc`。  
+新增**偏好技能**时：归入偏好组。  
+不要把 MetaGPT/ChatDev 运行时拷进本仓库；中段工程纪律继续依赖 Superpowers 插件。
 
 ## 提交流程
 

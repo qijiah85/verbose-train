@@ -7,7 +7,8 @@ description: >
 
 # Hello World 技能示例
 
-> 本技能位于 `examples/agent-skills/`，仅作演示。正式技能请放到 `agent-skills/skills/`。
+> 本技能位于 `examples/agent-skills/`，仅作演示。正式技能请放到 `agent-skills/skills/`。  
+> 这是**非流程类**最小结构示例；流程类请以 `agent-skills/templates/SKILL.md` 为准（含 SOP 输入/输出、阶段门禁、交付物检查）。
 
 ## 概述
 
